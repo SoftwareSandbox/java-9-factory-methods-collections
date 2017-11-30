@@ -24,7 +24,12 @@ The resulting collections will be immutable.
 If you want to do mutations to collections, you won't be able to use this feature
 
 ### Example
+Java8:
+```Java
+List<String> list3 = Collections.unmodifiableList(Stream.of("a", "b", "c").collect(toList()));
+```
 
+Java9:
 ```Java
     public static void main(String[] args){
         List<String> fruits = List.of("apple", "orange", "banana");
