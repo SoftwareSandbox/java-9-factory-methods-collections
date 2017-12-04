@@ -9,6 +9,15 @@ If you want to work with 2 versions of java and switch between them depending on
 - Switch between versions using:
     - ```export JAVA_HOME=`/usr/libexec/java_home -v 1.8` ```
     - ```export JAVA_HOME=`/usr/libexec/java_home -v 1.9` ```
+    
+protip: put these aliases in your `.bashrc` or `.zshrc` or whatever shell you use to easily switch between java versions
+```
+alias java8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+alias java9='export JAVA_HOME=$(/usr/libexec/java_home -v 9)'
+java8
+```
+This last part will make sure the default is currently java 8 (because by default the java version used is always the last installed one).
+Now we still need to find a way to switch versions ‘persistently’ because executing `java9` only switches the version for the current terminal.
 
 ## Java 9 factory methods for collections
 ### What does this new feature do?
