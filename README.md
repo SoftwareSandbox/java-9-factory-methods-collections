@@ -2,7 +2,13 @@
 ## Installation of Java 9
 ### Mac
 
-resource: http://davidcai.github.io/blog/posts/install-multiple-jdk-on-mac/
+Don't use jenv, it doesn't work well...
+If you want to work with 2 versions of java and switch between them depending on the project: (example with java 8 and java 9)
+- Install java 8
+- Install java 9
+- Switch between versions using:
+    - export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+    - export JAVA_HOME=`/usr/libexec/java_home -v 1.9`
 
 ## Java 9 factory methods for collections
 ### What does this new feature do?
